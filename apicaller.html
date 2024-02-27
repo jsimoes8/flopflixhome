@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Example</title>
+</head>
+<body>
+    <h1>API Example</h1>
+    <div id="result"></div>
+
+    <script>
+        // Function to make API call
+        function fetchData() {
+            fetch('https://api.example.com/data')
+                .then(response => response.json())
+                .then(data => {
+                    // Process the data and display it
+                    document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        // Call the function to fetch data when the page loads
+        fetchData();
+    </script>
+</body>
+</html>

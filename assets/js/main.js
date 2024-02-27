@@ -375,7 +375,6 @@
 				var redirectURL = $(this).data('redirect');
 				// Check if there is a redirection URL for the clicked href value.
 				if (redirectURL) {
-		
 					// Redirect to the specified URL.
 					window.location.href = redirectURL;
 				} else {
